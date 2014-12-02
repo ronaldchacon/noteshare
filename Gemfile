@@ -16,6 +16,10 @@ gem 'rake'
 gem 'shotgun'
 gem 'thin'
 
+gem 'bcrypt'
+
+gem 'rack-flash3', '~> 1.0.5'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -26,4 +30,5 @@ end
 group :test, :development do
   gem 'factory_girl'
   gem 'faker'
+  gem 'dotenv', '~> 1.0.2'
 end
