@@ -22,7 +22,7 @@ gem 'rack-flash3', '~> 1.0.5'
 
 gem 'pry'
 
-gem 'faker'
+gem 'faker', '~> 1.4.3'
 
 group :test do
   gem 'shoulda-matchers'
