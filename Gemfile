@@ -20,6 +20,8 @@ gem 'bcrypt'
 
 gem 'rack-flash3', '~> 1.0.5'
 
+gem 'pry'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
