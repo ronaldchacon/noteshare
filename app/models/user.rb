@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+  has_many :notes
+
   include BCrypt
 
   def password

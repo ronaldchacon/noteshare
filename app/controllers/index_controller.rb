@@ -35,3 +35,9 @@ end
 get '/session_view' do
   erb :session_view, layout: false
 end
+
+get '/redirect_auth_url' do
+  redirect "https://www.facebook.com/dialog/oauth?
+            client_id=#{ENV['FACEBOOK']}
+            &redirect_uri={redirect-uri}"
+end
