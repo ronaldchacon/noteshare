@@ -1,17 +1,29 @@
 <div class="container">
   <div class="row">
-    <h2>Notes</h2>
-    <% @notes.each do |note| %>
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h3 class="panel-title"><%= note.title %></h3>
+    <div class="col-md-10">
+      <h2>Notes</h2>
+      <% @notes.each do |note| %>
+      <div class="panel panel-default">
+        <div class="panel-heading">
+          <h3 class="panel-title"><%= note.title %></h3>
+        </div>
+        <div class="panel-body">
+          <p>
+            <%= note.content.truncate(140) %>
+            <a href="/notes/<%= note.id %>">Read more</a>
+          </p>
+          <p>Written by: <%= note.user.username %></p>
+          <% if current_user %>
+            <a href="/notes/<%= note.id %>/edit">edit</a>
+            <a href="/notes/<%= note.id %>/delete">delete</a>
+          <% end %>
+        </div>
       </div>
-      <div class="panel-body">
-        <%= note.content.truncate(140) %>
-        <a href="/notes/<%= note.id %>">Read more</a>
-      </div>
+      <% end %>
     </div>
-    <% end %>
+    <div class="col-md-2">
+      <a href="/notes/new" class="btn btn-default btn-lg h2" role="button">Add New Notes</a>
+    </div>
   </div>
 
   <hr>

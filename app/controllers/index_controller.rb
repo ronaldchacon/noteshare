@@ -2,11 +2,11 @@ get '/' do
   erb :index
 end
 
-# not_found do
-#   # redirect unknown pages to 404
-#   status 404
-#   erb :'404'
-# end
+not_found do
+  # redirect unknown pages to 404
+  status 404
+  erb :'404', layout: false
+end
 
 post '/users' do
   # create user account

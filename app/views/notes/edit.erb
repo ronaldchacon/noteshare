@@ -1,0 +1,17 @@
+<div class="container">
+  <div class="row">
+    <h2>Add Your Notes</h2>
+    <form role="form" method="post" action="/notes">
+      <input type="hidden" name="_method" value="put">
+      <div class="form-group">
+        <label for="note[title]">Title</label>
+        <input type="string" class="form-control" name="note[title]" value="<%= @note.title %>">
+      </div>
+      <div class="form-group">
+        <label for="note[content]">Content</label>
+        <textarea class="form-control" rows="25" name="note[content]" placeholder="Enter Content"><%= @note.content %></textarea>
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+  </div>
+</div>
