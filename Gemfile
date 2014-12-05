@@ -26,6 +26,8 @@ gem 'faker', '~> 1.4.3'
 
 gem 'rdiscount'
 
+gem 'dotenv', '~> 1.0.2'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
@@ -36,5 +38,4 @@ end
 group :test, :development do
   gem 'factory_girl'
   # gem 'faker'
-  gem 'dotenv', '~> 1.0.2'
 end
