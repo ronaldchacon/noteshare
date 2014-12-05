@@ -27,6 +27,8 @@ require 'rack-flash'
 require 'dotenv'
 Dotenv.load
 
+require "rdiscount"
+
 # Some helper constants for path-centric logic
 APP_ROOT = Pathname.new(File.expand_path('../../', __FILE__))
 

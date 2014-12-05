@@ -22,6 +22,7 @@ end
 
 get '/notes/:note_id' do
   @note = Note.find_by(id: params[:note_id])
+  @note.content = RDiscount.new(@note.content).to_html
   erb :'notes/show'
 end
 

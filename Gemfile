@@ -24,6 +24,8 @@ gem 'pry'
 
 gem 'faker', '~> 1.4.3'
 
+gem 'rdiscount'
+
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
