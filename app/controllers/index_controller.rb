@@ -19,11 +19,16 @@ post '/sessions' do
   if @user = User.find_by(email: params[:email])
     if @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      redirect '/'
+      redirect '/sessions/show'
     end
   else
     redirect '/'
   end
+end
+
+get '/sessions/show' do
+  @user = current_user
+  erb :'sessions/show'
 end
 
 get '/sessions/:id' do
@@ -31,6 +36,7 @@ get '/sessions/:id' do
   session.clear
   redirect '/'
 end
+
 
 get '/session_view' do
   erb :session_view, layout: false

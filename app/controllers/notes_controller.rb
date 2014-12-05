@@ -20,6 +20,13 @@ get '/notes/:note_id/delete' do
   redirect '/notes'
 end
 
+post '/notes/:note_id/favorites' do
+  if request.xhr?
+    user = current_user
+    user.favorites.create(user_id: user, note_id: params[:note_id])
+  end
+end
+
 get '/notes/:note_id' do
   @note = Note.find_by(id: params[:note_id])
   @note.content = RDiscount.new(@note.content).to_html
@@ -37,4 +44,5 @@ put '/notes/:note_id' do
   note.update_attributes(params[:note])
   redirect '/notes'
 end
+
 

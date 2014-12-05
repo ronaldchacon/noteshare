@@ -1,6 +1,8 @@
 class User < ActiveRecord::Base
 
   has_many :notes
+  has_many :favorites
+  has_many :favorite_notes, through: :favorites, source: :note
 
   include BCrypt
 
