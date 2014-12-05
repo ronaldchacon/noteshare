@@ -45,6 +45,11 @@
         <a class="btn btn-link btn-xs navbar-btn navbar-left" href="/notes">Browse Notes</a>
         <a class="btn btn-link btn-xs navbar-btn navbar-left" href="/sessions/show">Your Favorites</a>
       <% else %>
+
+        <button class="btn btn-primary navbar-btn navbar-right" href="#signup" data-toggle="modal" data-target=".bs-modal-sm">Register</button>
+
+        <p class="navbar-text navbar-right" style="padding-right: 10px"> OR </p>
+
         <form class="navbar-form navbar-right" role="form" action="/sessions" method="post">
           <div class="form-group">
             <input type="text" placeholder="Email" class="form-control" name="email">
@@ -52,7 +57,7 @@
           <div class="form-group">
             <input type="password" placeholder="Password" class="form-control" name="password">
           </div>
-          <button type="submit" class="btn btn-success">Sign in</button>
+          <button type="submit" class="btn btn-success" style="margin-right:-20px">Sign in</button>
         </form>
       <% end %>
         </div><!--/.navbar-collapse -->
