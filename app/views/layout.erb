@@ -42,6 +42,8 @@
       <% if logged_in? %>
         <a class="btn btn-danger btn-xs navbar-btn navbar-right" href="/sessions/<%= current_user.id %>">Sign Out</a>
         <p class="navbar-text navbar-right" style="padding-right: 10px">Welcome <%= current_user.username %>!</p>
+        <a class="btn btn-link btn-xs navbar-btn navbar-left" href="/notes">Browse Notes</a>
+        <a class="btn btn-link btn-xs navbar-btn navbar-left" href="/sessions/show">Your Favorites</a>
       <% else %>
         <form class="navbar-form navbar-right" role="form" action="/sessions" method="post">
           <div class="form-group">
