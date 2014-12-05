@@ -1,10 +1,17 @@
 <div class="container">
   <div class="row">
-    <h2><%= @note.title %></h2>
-    <div>
-    <%=  @note.content %>
+    <div class="col-md-10">
+      <h2><%= @note.title %></h2>
+      <div>
+      <%=  @note.content %>
+      </div>
+    </div>
+    <div class="col-md-2">
+      <a class="btn btn-primary btn-lg h2" id="my_url" href="/notes/<%= @note.id %>/favorites">Add to Favorites</a>
     </div>
   </div>
 
   <hr>
 </div> <!-- /container -->
+
+

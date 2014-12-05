@@ -66,5 +66,25 @@
     <script>window.jQuery || document.write('<script src="/js/vendor/jquery-1.11.1.min.js"><\/script>')</script>
     <script src="/js/vendor/bootstrap.min.js"></script>
     <script src="/js/main.js"></script>
+    <script type="text/javascript">
+    $(document).ready(function () {
+      $("#my_url").on("click", function(e) {
+        e.preventDefault();
+        var my_url = $("#my_url").attr('href')
+        $.ajax({
+          url: my_url,
+          type: 'POST'
+        })
+        .done(function() {
+          console.log("success");
+          $("#my_url").addClass('disabled').text('Favorited')
+        })
+        .fail(function() {
+          console.log("error");
+        })
+      })
+    });
+
+    </script>
   </body>
 </html>

@@ -1,0 +1,13 @@
+<div class="container">
+  <div class="row">
+    <h2>Your Favorites</h2>
+    <% @user.favorite_notes.each do |favorite| %>
+    <div class="panel panel-default">
+      <div class="panel-heading">
+        <h3 class="panel-title"><a href="/notes/<%= favorite.id %>"><%= favorite.title %></a></h3>
+      </div>
+    </div>
+    <% end %>
+  </div>
+  <hr>
+</div> <!-- /container -->
