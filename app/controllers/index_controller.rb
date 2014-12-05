@@ -10,8 +10,10 @@ end
 
 post '/users' do
   # create user account
-  User.create(params[:user])
-  redirect '/'
+  user = User.create(params[:user])
+  session[:user_id] = user.id
+  redirect '/sessions/show'
+  # redirect '/'
 end
 
 post '/sessions' do
