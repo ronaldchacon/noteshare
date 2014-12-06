@@ -9,7 +9,7 @@
         </div>
         <div class="panel-body">
           <p>
-            <%= note.content %>
+            <%= note.content.truncate(140) %>
             <a href="/notes/<%= note.id %>">Read more</a>
           </p>
           <p>Written by: <%= note.user.username %></p>
