@@ -1,3 +1,9 @@
-A Ruby/Sinatra application to demonstrate understanding of Sinatra and the "Magic" used by Ruby on Rails
+### Stack
+- Ruby
+- Sinatra
+
+### Use Case
+- A user can create a note
+- A user can faviorite a new 
 
 [Heroku Link](https://note-share-dbc.herokuapp.com/)
